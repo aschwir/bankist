@@ -288,4 +288,12 @@ movements.sort((a, b) => {
   if (a > b) return 1;
   if (b > a) return -1;
 });
-console.log(movements);
+// console.log(movements);
+
+labelBalance.addEventListener("click", function () {
+  const movementsUI = Array.from(
+    document.querySelectorAll(".movements__value"),
+    (el) => Number(el.textContent.replace("€", ""))
+  );
+  console.log(movementsUI);
+});
